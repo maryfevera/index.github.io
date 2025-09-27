@@ -1,0 +1,42 @@
+/* niebla animacion*/
+#fog1, #fog2 {
+  position: absolute; top: 0; left: 0;
+  height: 100%;
+  width: 300%;                     
+  pointer-events: none;
+  z-index: 3;                      
+  background-repeat: repeat-x;
+  will-change: transform, opacity;
+}
+
+#fog1 {
+  background-image: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png");
+  background-size: 1000px 100%;
+  filter: blur(1.5px) grayscale(.2) saturate(1.15) sepia(.2);
+  opacity: .35;
+  animation: fog1-move 22s linear infinite, fog1-fade 14s ease-in-out infinite;
+}
+#fog2 {
+  background-image: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog2.png");
+  background-size: 1200px 100%;
+  filter: blur(3px) grayscale(.25) saturate(1.05) sepia(.25);
+  opacity: .25;
+  animation: fog2-move 38s linear infinite reverse, fog2-fade 24s ease-in-out infinite;
+}
+
+@keyframes fog1-move { from { transform: translateX(0); } to { transform: translateX(-33.333%); } }
+@keyframes fog2-move { from { transform: translateX(0); } to { transform: translateX( 33.333%); } }
+
+@keyframes fog1-fade { 0%{opacity:.2} 50%{opacity:.5} 100%{opacity:.2} }
+@keyframes fog2-fade { 0%{opacity:.45} 50%{opacity:.18} 100%{opacity:.45} }
+
+@media (max-width: 768px){
+  .banner-texto h1 { 
+    font-size: 3.2rem; 
+    font-family: 'Special Elite';
+  }
+  
+}
+@media (prefers-reduced-motion: reduce){
+  #fog1, #fog2 { animation: none; opacity: .25; }
+}

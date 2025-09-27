@@ -1,0 +1,646 @@
+/* reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: #e8e8e8;
+  font-family: 'Cutive Mono', monospace;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* encabezado */
+#encabezado {
+  position: relative;
+  width: 100%;
+  overflow-x: clip;
+}
+
+.topbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 20px;
+  background: rgb(83 82 82 / 50%);
+  border: 0;
+}
+
+.logo { width: 56px; }
+.logo img { width: 100%; }
+
+/* menu escritorio */
+.menu-escritorio ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.menu-escritorio a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.menu-escritorio a:hover { border-bottom-color: #111; }
+
+/* banner*/
+#banner {
+  position: relative;
+  width: 100%;
+  overflow-x: clip;
+}
+
+#banner img {
+  width: 100%;
+  display: block;
+}
+
+.capa-oscura {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .35); 
+  z-index: 1;
+}
+
+
+.banner-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 3; 
+}
+
+.banner-texto h1 {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  font-size: 52px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+@media (min-width: 1200px) {
+  .menu-escritorio ul { gap: 32px; }
+
+  .banner-texto h1 {
+    font-size: 64px;
+    letter-spacing: 3px;
+    font-family: 'Special Elite', system-ui;
+    text-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.7),
+      0 0 6px rgba(255, 255, 255, 0.3);
+  }
+
+  .capa-oscura { background: rgba(0, 0, 0, 0.45); }
+}
+
+/* sobre sherlock */
+
+.sobre-sherlock{
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(imagenes/fondos_lisos/fondo_liso_web.png) center center;
+}
+
+#sobre-sherlock {
+  padding: 20px;
+}
+
+#sobre-sherlock header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#sobre-sherlock h2 {
+  margin: 20px 0 10px;
+  font-size: 28px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+#sobre-sherlock h3 {
+  margin: 20px 0 10px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+
+.contenedor-sobre { display: block; }
+.columna { margin-bottom: 20px; }
+.columna img { width: 100%; border-radius: 4px; }
+
+
+.caja {
+  background: #121212;
+  border: 1px solid #2a2a2a;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  color: #e8e8e8;
+}
+
+
+@media (min-width: 768px) {
+  .contenedor-sobre { display: flex; gap: 20px; }
+  .columna { flex: 1; }
+}
+
+
+.rejilla-sherlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: min(1200px, 100%);
+  margin: 0 auto 0 auto;
+  padding-inline: 16px; 
+}
+
+.tarjeta {
+  background: rgba(0, 0, 0, 0.42);
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.tarjeta p {
+  line-height: 1.8;
+  text-align: left;
+  color: #ffffff;
+}
+
+.foto-sherlock img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+
+/* temporadas*/
+
+.temporadas {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(imagenes/fondos_con_separador/fondo_separador_web_arriba.png) center center;
+}
+
+#temporadas .titulo-seccion {
+  margin: 30px 0 20px;   
+  font-size: 32px;       
+  text-align: center;   
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Special Elite', system-ui;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7); 
+}
+
+h2 {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  font-family: 'Special Elite', system-ui;
+  letter-spacing: .03em;
+}
+
+h3 { text-align: center; color: white; }
+
+.rejilla-temporadas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding-inline: 16px;
+}
+
+
+.rejilla-temporadas .columna { display: grid; gap: 20px; }
+
+.tarjeta-temp .frente,
+.tarjeta-temp .dorso {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform .7s ease;
+  backface-visibility: hidden;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .06) inset,
+    0 6px 24px rgba(0, 0, 0, .45);
+}
+
+.tarjeta-temp .frente {
+  transform: rotateY(0deg);
+  background: #222;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.tarjeta-temp .dorso {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+  background: rgba(0, 0, 0, .80);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
+
+.franja {
+  background: #f2b21a;
+  color: #000;
+  text-align: center;
+  padding: 8px 12px;
+  font-family: 'Special Elite', system-ui;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.tarjeta-temp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.tarjeta-temp:hover .frente { transform: rotateY(180deg); }
+.tarjeta-temp:hover .dorso  { transform: rotateY(360deg); }
+
+.dorso p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #eaeaea;
+  text-align: left;
+}
+
+
+.tarjeta-temp {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.tarjeta-temp:hover .tarjeta-temp {
+  transform: rotateY(180deg);
+}
+/* personajes*/
+.personajes { background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),url(imagenes/fondos_con_separador/fondo_separador_web_abajo.png) center center; }
+
+#personajes { padding: 40px 16px; }
+
+.head-personajes {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+#personajes h2 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#personajes .intro {
+  margin: 8px auto 0;
+  max-width: 700px;
+  color: #d0d0d0;
+}
+
+.grid-personajes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding-inline: 16px;
+}
+
+.card-personaje {
+  position: relative;
+  background: rgba(0, 0, 0, 0.42);
+  border: 1px solid #00000047;
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+  transition: transform .25s, box-shadow .25s;
+}
+
+.card-personaje:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .18);
+}
+
+.card-personaje img {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto 12px;
+  border-radius: 4px;
+  transition: transform .3s;
+}
+
+.card-personaje:hover img { transform: scale(1.04); }
+
+.card-personaje h3 {
+  margin: 6px 0 2px;
+  font-size: 20px;
+}
+
+.card-personaje .rol {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: #bdbdbd;
+}
+
+.card-personaje .resumen {
+  margin: 0 0 10px;
+  color: #d0d0d0;
+}
+
+.card-personaje:hover .detalle {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 8px;
+  color: #222;
+}
+
+@media (min-width: 600px) {
+  .grid-personajes { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 992px) {
+  .grid-personajes { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* resenas*/
+.resenas {
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(imagenes/fondos_lisos/fonso_liso_mobile.png);
+}
+
+.rejilla-resenas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding-inline: 16px;
+}
+
+.tarjeta-resena {
+  background: rgba(0, 0, 0, 0.42);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foto-resena {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto-resena img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.estrellas {
+  font-size: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.estrellas .llena { color: gold; }
+.estrellas .vacia { color: #555; }
+
+.tarjeta-resena h3 {
+  margin: 10px 0;
+  font-family: 'Special Elite', system-ui;
+  font-size: 18px;
+}
+
+.tarjeta-resena p {
+  color: #ddd;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .rejilla-sherlock { grid-template-columns: 1fr; }
+  .rejilla-temporadas { grid-template-columns: 1fr; }
+  .rejilla-resenas { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* footer*/
+.pie-pagina {
+  background: #3d3d3d;                 
+  color: #ccc;                      
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.6); 
+}
+
+.pie-pagina .datos p {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-family: 'Special Elite', system-ui;
+  line-height: 1.5;
+}
+
+.pie-pagina .redes a {
+  display: inline-block;
+  margin: 0 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.pie-pagina .redes img {
+  width: 32px;
+  height: 32px;
+  filter: grayscale(100%);            
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.pie-pagina .redes img:hover {
+  filter: grayscale(0%);              
+  transform: scale(1.15);             
+}
+
+@media (max-width: 600px) {
+
+
+  body { font-size: 16px; }
+  h1 { font-size: 28px; line-height: 1.15; }
+  h2 { font-size: 22px; }
+  h3 { font-size: 16px; }
+  section { padding-left: 12px; padding-right: 12px; }
+
+
+  .topbar { padding: 8px 12px; }
+  .logo { width: 44px; }
+
+
+  .menu-escritorio ul {
+    gap: 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .menu-escritorio ul::-webkit-scrollbar { display: none; }
+  .menu-escritorio a { font-size: 12px; letter-spacing: .5px; }
+
+  /* Banner */
+  #banner { min-height: auto; }
+  #banner img { width: 100%; height: auto; }
+  .banner-texto h1 { font-size: 28px; letter-spacing: 1px; }
+
+  /* Sobre Sherlock */
+  #sobre-sherlock { padding: 20px 12px; }
+  #sobre-sherlock h2 { margin: 18px 0 8px; }
+  #sobre-sherlock h3 { margin: 0 0 16px; font-size: 14px; }
+  .rejilla-sherlock { grid-template-columns: 1fr; gap: 16px; padding-inline: 0; }
+  .tarjeta { padding: 16px; }
+
+  /* Temporadas */
+  #temporadas .titulo-seccion { margin: 22px 0 16px; font-size: 24px; }
+  .rejilla-temporadas { grid-template-columns: 1fr; gap: 16px; padding-inline: 0; }
+  .tarjeta-temp { height: 220px; }           
+  .tarjeta-temp .frente,
+  .tarjeta-temp .dorso { height: 220px; }
+
+  .franja { padding: 6px 10px; font-size: 14px; }
+
+  /* Personajes */
+  #personajes { padding: 28px 12px; }
+  .grid-personajes { grid-template-columns: 1fr; gap: 16px; padding-inline: 0; }
+  .card-personaje { padding: 14px; }
+  .card-personaje img { max-width: 180px; }
+
+  /* Resenas */
+  .rejilla-resenas { grid-template-columns: 1fr; gap: 14px; padding-inline: 0; }
+  .tarjeta-resena { padding: 16px; }
+  .foto-resena { width: 110px; height: 110px; }
+
+  /* Footer */
+  .pie-pagina { padding: 18px 12px; }
+  .pie-pagina .datos p { font-size: 12px; }
+  .pie-pagina .redes img { width: 28px; height: 28px; }
+}
+
+
+@media (max-width: 400px) {
+  .banner-texto h1 { font-size: 24px; }
+  #temporadas .titulo-seccion { font-size: 22px; }
+  .franja { font-size: 13px; }
+  .tarjeta-temp,
+  .tarjeta-temp .frente,
+  .tarjeta-temp .dorso { height: 200px; }
+}
+
+/* menu hamburguesa*/
+.nav-toggle { display: none; }           
+.hamburger { display: none; }         
+.hamburger i { font-size: 22px; line-height: 1; }
+.hamburger .fa-xmark { display: none; }  
+
+
+@media (max-width: 768px) {
+
+
+  .hamburger{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px; height: 42px;
+    cursor: pointer;
+    z-index: 25;         
+    color: #fff;
+  }
+
+
+  .topbar{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    padding: 8px 12px;
+    backdrop-filter: blur(2px);
+  }
+
+  #banner { padding-top: 56px; }
+
+
+  .menu-escritorio{
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    width: 72vw; max-width: 300px;
+    background: #111;
+    padding: 80px 20px 20px;   
+    transform: translateX(100%);
+    transition: transform .3s ease;
+    z-index: 24;
+  }
+
+
+  .menu-escritorio ul{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: visible;          
+  }
+
+  .menu-escritorio a{
+    display: block;
+    padding: 10px 0;
+    font-size: 16px;
+    letter-spacing: .5px;
+  }
+
+  .nav-toggle:checked ~ .menu-escritorio{
+    transform: translateX(0);
+  }
+
+
+  .nav-toggle:checked + .hamburger .fa-bars{ display: none; }
+  .nav-toggle:checked + .hamburger .fa-xmark{ display: inline-block; }
+}
